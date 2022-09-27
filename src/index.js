@@ -1,9 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-// function Newcomponent(){
-//   return <h1>Hello</h1>
-// }
+// JSX Rules
+// return single element
+// div/section/artical or fragment
+// use CamelCase for HTML elements
+// classname instead of class
+// close every element
 
 const Newcomponent = () => {
   return React.createElement("h1", {}, "hello");
