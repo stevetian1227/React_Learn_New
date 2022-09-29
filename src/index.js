@@ -10,22 +10,11 @@ import ReactDOM from "react-dom";
 
 import "./index.css";
 
-//setup vars
-
-const books = [
-  {
-    id: 0,
-    img: "https://images-na.ssl-images-amazon.com/images/I/71fXg7UX5+L._AC._SR360,460.jpg",
-    author: "Author Name2",
-    title: "Book Title2",
-  },
-  {
-    id: 1,
-    img: "https://images-na.ssl-images-amazon.com/images/I/51eO828JvzL._AC._SR360,460.jpg",
-    author: "Author Name",
-    title: "Book Title",
-  },
-];
+// import var need {}
+// import component doesn't need {}
+// default export can name different in other files while normal var export need to be the same name as the that one
+import { books } from "./books";
+import Book from "./Book";
 
 const Booklist = () => {
   return (
@@ -38,17 +27,6 @@ const Booklist = () => {
         return <Book key={book.id} {...book}></Book>;
       })}
     </section>
-  );
-};
-
-const Book = (props) => {
-  const { img, author, title } = props;
-  return (
-    <article className="book">
-      <h2>{title}</h2>
-      <h4>{author}</h4>
-      <img src={img} alt="" />
-    </article>
   );
 };
 
